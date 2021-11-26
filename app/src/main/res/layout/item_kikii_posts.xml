@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginVertical="10dp"
+    android:background="@drawable/bg_one_corner_round_white"
+    android:elevation="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_user"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/img_app_logo_circle" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/img_user"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/tv_time_ago"
+            android:fontFamily="@font/lato_bold"
+            android:text="Kikki"
+            android:textColor="@color/black"
+            android:textSize="18sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_time_ago"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/lato_regular"
+            android:text="12 min. ago"
+            android:textColor="@color/light_grey"
+            android:textSize="12sp"></TextView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_user"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/lato_regular"
+        android:text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna."
+        android:textColor="@color/black"
+        android:textSize="16sp"></TextView>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tv_description"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="15dp"
+        android:alpha="0.8"
+        android:background="@color/light_grey">
+
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view1"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:paddingBottom="30dp"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/tv_likes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_fill_heart"
+            android:drawablePadding="5dp"
+            android:text="46"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_comment_red"
+            android:drawablePadding="5dp"
+            android:text="40"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp">
+
+        </TextView>
+    </LinearLayout>
+
+</RelativeLayout>

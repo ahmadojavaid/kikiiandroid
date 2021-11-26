@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.jobesk.kikiiapp.Activities.CreatePostActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/app_header_with_tick" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            tools:context="com.jobesk.kikiiapp.Activities.CreatePostActivity">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="Filters"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_title"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/lato_regular"
+                android:text="Age"
+                android:textAllCaps="false"
+                android:textColor="@color/grey"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_start_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_title"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@+id/dash"
+                android:fontFamily="@font/lato_regular"
+                android:text="18"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/dash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_title"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@+id/tv_end_age"
+                android:fontFamily="@font/lato_regular"
+                android:text="-"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_end_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_title"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/lato_regular"
+                android:text="60"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
+
+            <com.crystal.crystalrangeseekbar.widgets.CrystalRangeSeekbar
+                android:id="@+id/rsb_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/age"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                app:bar_color="@color/grey"
+                app:bar_highlight_color="@color/colorPrimaryDark"
+                app:corner_radius="50"
+                app:data_type="_integer"
+                app:left_thumb_image="@drawable/ic_seek_pointer"
+                app:max_value="60"
+                app:min_value="18"
+                app:right_thumb_image="@drawable/ic_seek_pointer"
+                app:steps="1" />
+
+            <TextView
+                android:id="@+id/tv_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rsb_age"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/lato_regular"
+                android:text="Distance"
+                android:textAllCaps="false"
+                android:textColor="@color/grey"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_kms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rsb_age"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_toLeftOf="@+id/tv_miles"
+                android:fontFamily="@font/lato_regular"
+                android:text="Km"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_miles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rsb_age"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/lato_regular"
+                android:text="Miles"
+                android:textAllCaps="false"
+                android:textColor="@color/grey"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_distance_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_miles"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/lato_regular"
+                android:text="18"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
+
+
+            <com.crystal.crystalrangeseekbar.widgets.CrystalSeekbar
+                android:id="@+id/sb_distance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_distance_value"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                app:bar_color="@color/grey"
+                app:bar_highlight_color="@color/colorPrimaryDark"
+                app:data_type="_integer"
+                app:left_thumb_image="@drawable/ic_seek_pointer"
+                app:max_value="1000"
+                app:min_value="10"
+                app:steps="1" />
+
+            <TextView
+                android:id="@+id/tv_height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sb_distance"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/lato_regular"
+                android:text="Height"
+                android:textAllCaps="false"
+                android:textColor="@color/grey"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_height_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_height"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/lato_regular"
+                android:text="Any Height"
+                android:textAllCaps="false"
+                android:textColor="@color/grey"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_any_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sb_distance"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/lato_regular"
+                android:text="Any Height"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/tv_height_value"
+                android:layout_marginTop="20dp"
+                android:alpha="0.3"
+                android:background="@color/light_grey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view1"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="Premium Filters"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/clear_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:fontFamily="@font/lato_bold"
+                        android:gravity="right"
+                        android:text="Clear Filters"
+                        android:textAllCaps="false"
+                        android:textColor="@color/grey"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_premium_filters"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="visible"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="3"
+                    tools:itemCount="20"
+                    tools:listitem="@layout/item_premium_filters">
+                </androidx.recyclerview.widget.RecyclerView>
+                <TextView
+                    android:id="@+id/upgrade_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/fira_sans_bold"
+                    android:gravity="center_horizontal"
+                    android:text="Upgrade app For premium filter!"
+                    android:textColor="@color/colorPrimary">
+                </TextView>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

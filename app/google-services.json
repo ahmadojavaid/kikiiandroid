@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1075735024911",
+    "firebase_url": "https://kikiiapp-default-rtdb.firebaseio.com",
+    "project_id": "kikiiapp",
+    "storage_bucket": "kikiiapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1075735024911:android:62b39baaaf9316b6399a7a",
+        "android_client_info": {
+          "package_name": "com.jobesk.kikiiapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1075735024911-tnnh75p6kv11q6085vbu34fu0epgaber.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jobesk.kikiiapp",
+            "certificate_hash": "0cc3b910b843c571bba2e55bb2ff563286a03c32"
+          }
+        },
+        {
+          "client_id": "1075735024911-1gu26suuaoqoa34472mvd23mt6422nv3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJ1YESpzhbFMd0b2sw6eseRd-F2IzipHI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1075735024911-1gu26suuaoqoa34472mvd23mt6422nv3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1075735024911-02kkqbkku0qu07od0il34a7g3e6rtpkg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com."
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

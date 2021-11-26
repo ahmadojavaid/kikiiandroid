@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.jobesk.kikiiapp.Activities.SignUpModule.AddProfileImageActivity">
+
+    <include
+        layout="@layout/app_header"
+        android:id="@+id/app_header">
+    </include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_below="@+id/app_header"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/you_don_t_get_a_second_chance_to_make_a_first_impression"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:fontFamily="@font/lato_bold">
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add your main profile image"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:fontFamily="@font/lato_regular">
+        </TextView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@android:color/transparent">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bg_date_picker"
+                android:layout_centerHorizontal="true">
+            </ImageView>
+            <Button
+                android:id="@+id/btn_add_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/btn_back_red"
+                android:text="Add A Profile \n Image"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:textSize="18sp"
+                android:textAllCaps="false"
+                android:fontFamily="@font/lato_bold">
+
+            </Button>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

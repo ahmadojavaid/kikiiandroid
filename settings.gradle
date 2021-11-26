@@ -1,0 +1,2 @@
+rootProject.name='Kikki_Android'
+include ':app'

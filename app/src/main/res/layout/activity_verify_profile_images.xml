@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.jobesk.kikiiapp.Activities.SignUpModule.AddProfileImageActivity">
+
+    <include
+        android:id="@+id/app_header"
+        layout="@layout/app_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_header"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_verify_complete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mark_complete"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone">
+
+        </ImageView>
+        <ImageView
+            android:id="@+id/img_verify_fail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_declined"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center"
+            android:text="@string/profile_picture_verification"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <androidx.cardview.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1.3"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardMaxElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <!--<ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/dummy_person">
+
+                    </ImageView>-->
+                    <com.joooonho.SelectableRoundedImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/img_user"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_place_holder_image"
+                        app:sriv_left_bottom_corner_radius="50dp"
+                        app:sriv_left_top_corner_radius="10dp"
+                        app:sriv_right_bottom_corner_radius="10dp"
+                        app:sriv_right_top_corner_radius="10dp" />
+                    <ImageView
+                        android:id="@+id/img_face_detection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/face_verifying_img">
+
+                    </ImageView>
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp">
+
+        <Button
+            android:id="@+id/btn_upload_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/btn_back_red"
+            android:fontFamily="@font/lato_bold"
+            android:text="Upload Again"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btn_verify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_back_green"
+            android:fontFamily="@font/lato_bold"
+            android:text="Verify"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/btn_back_red"
+            android:fontFamily="@font/lato_bold"
+            android:text="Next"
+            android:visibility="gone"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+</RelativeLayout>

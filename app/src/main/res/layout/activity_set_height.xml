@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.jobesk.kikiiapp.Activities.CreatePostActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/app_header" />
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_marginHorizontal="20dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="HEIGHT"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/border_one_corner_round_red"
+        android:paddingVertical="10dp">
+
+        <com.webianks.library.scroll_choice.ScrollChoice
+            android:id="@+id/scroll_feet"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="10dp"
+            app:scroll_background_color="@color/white"
+            app:scroll_item_space="80dp"
+            app:scroll_item_text_color="@color/grey"
+            app:scroll_selected_item_text_color="@color/black"
+            app:scroll_visible_item_count="3" />
+
+        <com.webianks.library.scroll_choice.ScrollChoice
+            android:id="@+id/scroll_inches"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="40dp"
+            android:layout_toRightOf="@+id/scroll_feet"
+            app:scroll_background_color="@color/white"
+            app:scroll_item_space="80dp"
+            app:scroll_item_text_color="@color/grey"
+            app:scroll_selected_item_text_color="@color/black"
+            app:scroll_visible_item_count="3" />
+        <!--<Spinner
+            android:id="@+id/sp_feet"
+            android:layout_width="70dp"
+            android:layout_height="200dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="10dp"
+            android:entries="@array/list_of_feet"
+            android:background="@android:color/transparent"
+            android:textAlignment="center"
+            android:isScrollContainer="true"
+
+            style="@style/Widget.AppCompat.TextView.SpinnerItem">
+        </Spinner>
+        <Spinner
+            android:id="@+id/sp_inches"
+            android:layout_width="70dp"
+            android:layout_height="200dp"
+            android:layout_toRightOf="@+id/sp_feet"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="40dp"
+            android:background="@android:color/transparent"
+            android:entries="@array/list_of_inches"
+            android:textAlignment="center"
+            style="@style/Widget.AppCompat.TextView.SpinnerItem">
+        </Spinner>
+-->
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/btn_back_red"
+        android:fontFamily="@font/lato_bold"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp">
+
+    </Button>
+</RelativeLayout>

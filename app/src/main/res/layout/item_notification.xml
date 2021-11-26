@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:padding="10dp"
+    android:layout_centerInParent="true"
+    android:background="@drawable/bg_chat_main"
+    android:orientation="vertical">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_user"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_user_dummy"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/lato_regular"
+        android:gravity="left"
+        android:text="Lorum Ipsum Is Simply A Dummy Text Created For Print."
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_user"
+        app:layout_constraintEnd_toStartOf="@+id/imageView8"
+        app:layout_constraintStart_toEndOf="@+id/img_user"
+        app:layout_constraintTop_toTopOf="@+id/img_user">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/tv_time_ago"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/lato_regular"
+        android:text="12 min. ago"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/imageView8"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_liked"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_like"
+        android:visibility="gone">
+
+    </ImageView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

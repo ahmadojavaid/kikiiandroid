@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/img_curiosity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_want_someday"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Want Someday"
+        android:textSize="16sp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/lato_regular"
+        android:textColor="@color/black"
+        android:layout_toRightOf="@+id/img_curiosity"/>
+</RelativeLayout>

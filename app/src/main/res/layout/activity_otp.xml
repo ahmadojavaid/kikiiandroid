@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@color/white"
+    tools:context="com.jobesk.kikiiapp.Activities.SignUpModule.EnterPhoneNumberActivity">
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/app_logo" />
+
+    <LinearLayout
+        android:id="@+id/ll_texts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_description_pager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_heading_pager"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/lato_regular"
+            android:text="Enter 6 Digit code sent to your phone number"
+            android:textAllCaps="true"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_description"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_texts"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:weightSum="6"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_otp_1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:editable="true"
+                android:textSize="30dp"
+                android:gravity="center"
+                android:inputType="phone"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:layout_marginHorizontal="5dp">
+            </EditText>
+            <EditText
+                android:id="@+id/et_otp_2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:editable="true"
+                android:gravity="center"
+                android:textSize="30dp"
+                android:inputType="phone"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:layout_marginHorizontal="5dp">
+            </EditText>
+            <EditText
+                android:id="@+id/et_otp_3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:editable="true"
+                android:gravity="center"
+                android:textSize="30dp"
+                android:inputType="phone"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:layout_marginHorizontal="5dp">
+            </EditText>
+            <EditText
+                android:id="@+id/et_otp_4"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:editable="true"
+                android:gravity="center"
+                android:textSize="30dp"
+                android:inputType="phone"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:layout_marginHorizontal="5dp">
+            </EditText>
+            <EditText
+                android:id="@+id/et_otp_5"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:editable="true"
+                android:gravity="center"
+                android:textSize="30dp"
+                android:inputType="phone"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:layout_marginHorizontal="5dp">
+            </EditText>
+            <EditText
+                android:id="@+id/et_otp_6"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:editable="true"
+                android:gravity="center"
+                android:textSize="30dp"
+                android:maxLength="1"
+                android:inputType="phone"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:layout_marginHorizontal="5dp">
+            </EditText>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_next"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginBottom="50dp"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_heading_pager"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/lato_regular"
+            android:text="You can resend code in"
+            android:textAllCaps="true"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_description"
+            android:textStyle="normal" />
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="02:00"
+            android:textAllCaps="true"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/text_description"
+            android:textStyle="normal"></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_resend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_next"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_marginBottom="50dp"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_heading_pager"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/lato_regular"
+            android:text="Didn't Receive Code?"
+            android:textAllCaps="true"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_description"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tv_resend_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_heading_pager"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="RESEND"
+            android:textAllCaps="true"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/text_description"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_back_red"
+        android:fontFamily="@font/lato_bold"
+        android:text="Next"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:textColor="@color/white">
+
+    </Button>
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:elevation="4dp"
+        android:layout_marginBottom="5dp"
+        app:cardBackgroundColor="@color/white">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_count"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_arrow_back"
+                android:padding="18dp"
+                android:text="1"
+                android:textSize="20sp"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:fontFamily="@font/fira_sans_bold"
+                android:layout_marginLeft="20dp">
+            </TextView>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/app_logo"
+                android:paddingVertical="10dp"
+                android:layout_centerInParent="true">
+            </ImageView>
+            <ImageView
+                android:id="@+id/img_delete"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_delete"
+                android:layout_alignParentEnd="true"
+                android:padding="15dp"
+                android:onClick="onClick"
+                android:layout_marginRight="20dp">
+            </ImageView>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

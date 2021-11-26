@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginBottom="5dp"
+        android:elevation="4dp"
+        app:cardBackgroundColor="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:onClick="onClick"
+                android:padding="18dp"
+                android:src="@drawable/ic_arrow_back"></ImageView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:paddingVertical="10dp"
+                android:src="@drawable/app_logo"></ImageView>
+
+            <ImageView
+                android:id="@+id/img_video_call"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@+id/img_voice_call"
+                android:src="@drawable/ic_camera_black"></ImageView>
+
+            <ImageView
+                android:id="@+id/img_voice_call"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@+id/img_menu"
+                android:src="@drawable/ic_phone_black"></ImageView>
+
+            <ImageView
+                android:id="@+id/img_menu"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:padding="8sp"
+                android:src="@drawable/menu_red"></ImageView>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

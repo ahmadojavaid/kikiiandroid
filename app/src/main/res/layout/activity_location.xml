@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@color/white"
+    tools:context="com.jobesk.kikiiapp.Activities.SignUpModule.EnterPhoneNumberActivity">
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/app_logo" />
+
+    <LinearLayout
+        android:id="@+id/ll_texts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_description_pager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_heading_pager"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/lato_regular"
+            android:text="Meet matches and friends
+in the UK and Ireland."
+            android:textAllCaps="true"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_description"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dummy_map"
+        android:layout_below="@+id/ll_texts"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true">
+
+    </ImageView>
+
+    <Button
+        android:id="@+id/btn_enable_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_back_red"
+        android:fontFamily="@font/lato_bold"
+        android:text="Enable Location"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textColor="@color/white">
+
+    </Button>
+</RelativeLayout>

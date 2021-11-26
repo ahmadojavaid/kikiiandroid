@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <dimen name="text_heading">36sp</dimen>
+    <dimen name="text_description">18sp</dimen>
+    <dimen name="text_common">20sp</dimen>
+
+    <dimen name="design_bottom_navigation_text_size" tools:override="true">16sp</dimen>
+    <dimen name="design_bottom_navigation_active_text_size" tools:override="true">16sp</dimen>
+    <dimen name="design_bottom_navigation_height" tools:override="true">56dp</dimen>
+
+    <dimen name="plus_btn_width_height">30dp</dimen>
+
+    <dimen name="local_preview_margin_top">28dp</dimen>
+    <dimen name="local_preview_margin_right">24dp</dimen>
+
+    <!-- buttons -->
+    <dimen name="call_button_size">60dp</dimen>
+    <dimen name="other_button_size">54dp</dimen>
+
+    <dimen name="remote_back_icon_margin_bottom">90dp</dimen>
+
+
+    <!-- buttons -->
+    <dimen name="control_bottom_margin">40dp</dimen>
+    <dimen name="control_bottom_horizontal_margin">24dp</dimen>
+    <dimen name="local_preview_width">112dp</dimen>
+    <dimen name="local_preview_height">150dp</dimen>
+
+    <dimen name="local_back_icon_size">48dp</dimen>
+
+    <dimen name="icon_size">30dp</dimen>
+    <dimen name="social_icon_size">50dp</dimen>
+
+</resources>

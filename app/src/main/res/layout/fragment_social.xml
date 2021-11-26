@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/app_header_for_fragments" />
+
+    <LinearLayout
+        android:id="@+id/ll_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/header"
+        android:orientation="horizontal"
+
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+
+            <TextView
+                android:id="@+id/commuity_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/lato_black"
+                android:gravity="center"
+                android:text="Community"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="17sp" />
+
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/img_selected_community"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:visibility="visible"-->
+            <!--                android:src="@drawable/ic_community_red"/>-->
+            <!--            <ImageView-->
+            <!--                android:id="@+id/img_select_community"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:src="@drawable/ic_community_grey"/>-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+
+            <TextView
+                android:id="@+id/events_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/lato_black"
+                android:gravity="center"
+                android:text="Events"
+                android:textColor="@color/grey"
+                android:textSize="17sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/kiki_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/lato_black"
+                android:gravity="center"
+                android:text="Kikii"
+                android:textColor="@color/grey"
+                android:textSize="17sp" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/ll_tabs"
+        android:alpha="0.3"
+        android:background="@color/light_grey" />
+
+    <FrameLayout
+        android:id="@+id/tab_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view1" />
+</RelativeLayout>

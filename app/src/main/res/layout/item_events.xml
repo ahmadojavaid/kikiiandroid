@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_centerInParent="true"
+    android:orientation="vertical"
+    android:layout_margin="20dp">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_event_image"
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+            <com.joooonho.SelectableRoundedImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/img_event"
+                android:src="@drawable/ic_place_holder_image"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:elevation="10dp"
+                app:sriv_left_top_corner_radius="10dp"
+                app:sriv_right_top_corner_radius="10dp"
+                app:sriv_left_bottom_corner_radius="50dp"
+                app:sriv_right_bottom_corner_radius="10dp" />
+
+            <TextView
+                android:id="@+id/tv_event_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginHorizontal="20dp"
+                android:text="Discovering Your Authentic Queer Self - UK"
+                android:layout_above="@+id/tv_time"
+                android:maxLines="1"
+                android:textSize="18sp"
+                android:fontFamily="@font/lato_bold"
+                android:textColor="@color/white">
+            </TextView>
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="30dp"
+                android:layout_marginHorizontal="20dp"
+                android:text="Tuesday, Jun 23, 10:00 PM - 11:00 PM"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:maxLines="1">
+            </TextView>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_attendents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_below="@+id/rl_event_image">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_attendents"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:orientation="horizontal"
+                    tools:itemCount="6"
+                    tools:listitem="@layout/item_user_image">
+
+                </androidx.recyclerview.widget.RecyclerView>
+                <ImageView
+                    android:id="@+id/img_blur_users"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_horizontal_images">
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/img_attend_event"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/red_add"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true">
+                </ImageView>
+                <ImageView
+                    android:id="@+id/img_cancel_attend_event"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_cancel_event_attend"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:visibility="gone">
+                </ImageView>
+            </RelativeLayout>
+        </LinearLayout>
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/ll_attendents"
+        android:alpha="0.3"
+        android:layout_marginTop="10dp"
+        android:background="@color/light_grey"></View>
+    </RelativeLayout>

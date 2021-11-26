@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jobesk.kikiiapp.Activities.CreatePostActivity"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/app_header_for_cat"></include>
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="what are your political views?"
+        android:layout_below="@+id/header"
+        android:textSize="18sp"
+        android:fontFamily="@font/lato_bold"
+        android:textColor="@color/black"
+        android:textAllCaps="true"
+        android:layout_marginHorizontal="20dp">
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <com.plumillonforge.android.chipview.ChipView
+            android:id="@+id/chip_statuses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:chip_line_spacing="10dp"
+            android:layout_gravity="clip_horizontal"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_statuses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginTop="20dp"
+        tools:itemCount="7"
+        tools:listitem="@layout/item_status"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="3"
+        android:visibility="gone"
+        android:layout_marginHorizontal="20dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_back_red"
+        android:fontFamily="@font/lato_bold"
+        android:text="Save"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/white">
+
+    </Button>
+</RelativeLayout>

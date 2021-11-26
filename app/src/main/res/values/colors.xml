@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E22E2E</color>
+    <color name="colorPrimaryDark">#E22E2E</color>
+    <color name="colorAccent">#E22E2E</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="light_white">#ECEAEA</color>
+    <color name="grey">#707070</color>
+    <color name="light_grey">#9A9A9A</color>
+    <color name="fb_blue">#3B5998</color>
+    <color name="insta_color">#DD2A7B</color>
+    <color name="dim_pink">#FFC1C1</color>
+
+    <color name="localBackground">#827b92</color>
+    <color name="remoteBackground">#484258</color>
+    <color name="transparent">#00FFFFFF</color>
+</resources>

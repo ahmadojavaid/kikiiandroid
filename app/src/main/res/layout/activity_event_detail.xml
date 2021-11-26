@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jobesk.kikiiapp.Activities.EventDetailActivity">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_type"
+        tools:context="com.jobesk.kikiiapp.Activities.EventDetailActivity">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.jobesk.kikiiapp.Activities.EventDetailActivity">
+
+            <RelativeLayout
+                android:id="@+id/rl_event_image"
+                android:layout_width="match_parent"
+                android:layout_height="300dp">
+
+                <com.joooonho.SelectableRoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/img_event"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_place_holder_image"
+                    app:sriv_left_bottom_corner_radius="50dp"
+                    app:sriv_left_top_corner_radius="10dp"
+                    app:sriv_right_bottom_corner_radius="10dp"
+                    app:sriv_right_top_corner_radius="10dp" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/tv_time"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:maxLines="2"
+                    android:text="Discovering Your Authentic Queer Self - UK"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginBottom="30dp"
+                    android:maxLines="1"
+                    android:text="Tuesday, Jun 23, 10:00 PM - 11:00 PM"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_add_reply_options"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_event_image"
+                android:layout_marginVertical="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <ImageView
+                    android:id="@+id/img_join"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:paddingVertical="10dp"
+                    android:src="@drawable/img_add_black" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey">
+
+                </View>
+
+                <ImageView
+                    android:id="@+id/img_share"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+
+                    android:layout_weight="1"
+                    android:paddingVertical="10dp"
+                    android:src="@drawable/ic_reply_black" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/ll_add_reply_options"
+                android:alpha="0.3"
+                android:background="@color/light_grey" />
+
+            <RelativeLayout
+                android:id="@+id/rl_posted_by"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view1"
+                android:layout_marginVertical="20dp"
+                android:gravity="center_horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_user"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_user_dummy" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/img_user"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_time_ago"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Posted by"
+                        android:textColor="@color/light_grey"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toLeftOf="@+id/tv_time_ago"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Callie L."
+                        android:textColor="@color/black"
+                        android:textSize="16sp">
+
+                    </TextView>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/rl_posted_by"
+                android:alpha="0.3"
+                android:background="@color/light_grey" />
+
+            <LinearLayout
+                android:id="@+id/ll_attending"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view2"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Attending"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_attending"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="6"
+                    tools:itemCount="7"
+                    tools:listitem="@layout/item_user_image">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/ll_attending"
+                android:alpha="0.3"
+                android:background="@color/light_grey" />
+
+            <LinearLayout
+                android:id="@+id/ll_tickets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view3"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="20dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/btn_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/btn_back_red"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="View Tickets"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp">
+
+                </Button>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/ll_tickets"
+                android:alpha="0.3"
+                android:background="@color/light_grey" />
+
+            <LinearLayout
+                android:id="@+id/ll_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view4"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Description"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea."
+                    android:textColor="@color/black"
+                    android:textSize="16sp">
+
+                </TextView>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bg_plus" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_add_white"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.3"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:fontFamily="@font/fira_sans_italic"
+                    android:gravity="center_vertical"
+                    android:hint="Say Something..."
+                    android:paddingLeft="20dp"
+                    android:textSize="16sp">
+
+                </EditText>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_send_message">
+
+                </ImageView>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:alpha="0.2"
+                android:background="@color/colorPrimary" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

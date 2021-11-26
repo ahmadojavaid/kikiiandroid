@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/app_header" />
+
+    <LinearLayout
+        android:id="@+id/ll_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/header"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/my_friends_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/lato_black"
+                android:gravity="center"
+                android:text="My Friends"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="17sp" />
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/img_selected_my_friends"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:src="@drawable/ic_my_friends_red"-->
+            <!--                android:visibility="visible" />-->
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/img_select_my_friends"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:src="@drawable/ic_my_friends_grey"-->
+            <!--                android:visibility="gone" />-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+
+            <TextView
+                android:id="@+id/pending_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/lato_black"
+                android:gravity="center"
+
+                android:text="Pending"
+                android:textColor="@color/grey"
+                android:textSize="17sp" />
+
+
+            <!--                        <ImageView-->
+            <!--                            android:id="@+id/img_selected_pending"-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:src="@drawable/ic_pending_red"-->
+            <!--                            android:visibility="gone" />-->
+
+            <!--                        <ImageView-->
+            <!--                            android:id="@+id/img_select_pending"-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:src="@drawable/ic_pending_grey"-->
+            <!--                            android:visibility="visible" />-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/sent_requests_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/lato_black"
+                android:gravity="center"
+                android:text="Sent Requests"
+                android:textColor="@color/grey"
+                android:textSize="17sp" />
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/img_selected_sent_requests"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:src="@drawable/ic_sent_requests_red"-->
+            <!--                android:visibility="gone" />-->
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/img_select_sent_requests"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:src="@drawable/ic_sent_requests_grey"-->
+            <!--                android:visibility="visible" />-->
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/ll_tabs"
+        android:alpha="0.3"
+        android:background="@color/light_grey"></View>
+
+    <FrameLayout
+        android:id="@+id/tab_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view1"></FrameLayout>
+</RelativeLayout>

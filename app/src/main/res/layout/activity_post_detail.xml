@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.jobesk.kikiiapp.Activities.PostDetailActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/app_header" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_type"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            tools:context="com.jobesk.kikiiapp.Activities.PostDetailActivity">
+
+            <RelativeLayout
+                android:id="@+id/rl_post"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/bg_one_corner_round_white"
+                android:elevation="10dp"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_user"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_user_dummy" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@+id/img_post_menu"
+                    android:layout_toRightOf="@+id/img_user"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toLeftOf="@+id/tv_time_ago"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="Kikii"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/tv_time_ago"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lato_regular"
+
+                        android:textColor="@color/light_grey"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_post_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="20dp"
+                    android:paddingVertical="20dp"
+                    android:paddingLeft="20dp"
+                    android:src="@drawable/ic_down_arrow"
+                    android:visibility="gone">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/tv_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_user"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/img_media"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_below="@+id/tv_description"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/border_four_corner_plan_white"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_place_holder_image"
+                    android:visibility="gone" />
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tv_description"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:alpha="0.8"
+                    android:background="@color/light_grey"
+                    android:visibility="gone">
+
+                </View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view1"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal"
+                    android:paddingBottom="30dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:drawableLeft="@drawable/ic_fill_heart"
+                        android:drawablePadding="5dp"
+                        android:text="46"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:drawableLeft="@drawable/ic_comment_red"
+                        android:drawablePadding="5dp"
+                        android:text="40"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:drawableLeft="@drawable/ic_share_red"
+                        android:drawablePadding="5dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16sp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_comments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_post"
+                android:layout_marginBottom="10dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="10"
+                tools:listitem="@layout/item_comment">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/tv_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_post"
+                android:layout_marginTop="50dp"
+                android:gravity="center|center_vertical"
+                android:text="No Comments"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_media"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_above="@+id/ll_type"
+        android:layout_marginVertical="10dp"
+        android:layout_marginLeft="5dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/img_selected"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:foregroundGravity="right"
+            android:src="@drawable/ic_user_dummy"></ImageView>
+
+        <ImageView
+            android:id="@+id/img_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:foregroundGravity="right"
+            android:src="@drawable/ic_delete_media"></ImageView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_type"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bg_plus"></ImageView>
+
+            <ImageView
+                android:id="@+id/img_select_media"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_add_white"
+                android:textColor="@color/white"
+                android:textSize="16sp"></ImageView>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+
+                    android:fontFamily="@font/fira_sans_italic"
+                    android:gravity="center_vertical"
+                    android:hint="Say Something..."
+                    android:imeOptions="actionDone"
+                    android:paddingLeft="20dp"
+                    android:textSize="16sp">
+
+                </EditText>
+
+                <ImageView
+                    android:id="@+id/img_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_send_message" />
+
+                <TextView
+                    android:id="@+id/tv_update_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/fira_sans_bold"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="10dp"
+                    android:text="Update"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:alpha="0.2"
+                android:background="@color/colorPrimary">
+
+            </View>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

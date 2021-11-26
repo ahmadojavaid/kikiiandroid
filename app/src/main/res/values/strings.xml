@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">Kikii</string>
+    <string name="agora_app_id">3e9f393f860e4cbbb2a1b76b96505ac7</string>
+    <!--    <string name="agora_access_token_video">0068ee1391211f54a80b334a55274e35c63IADkZC5VWyBECPNpEIsd8N2jug7NYu8latQVHeqEHp2/Vo3OU7gAAAAAEAAlICC+vqH9XwEAAQC9of1f</string>-->
+    <!--    <string name="agora_access_token_voice">0068ee1391211f54a80b334a55274e35c63IACdmMU2b/beaa008i/IKXYSzLXvRmXClGyExIjpXVivRDtY++cAAAAAEAAlICC+/aX9XwEAAQD9pf1f</string>-->
+
+    <string name="continue_with_phone">Continue with Phone</string>
+    <string name="continue_with">Continue with</string>
+    <string name="you_don_t_get_a_second_chance_to_make_a_first_impression">You don’t get a second chance to make a first impression!</string>
+    <string name="add_img_from_camera">Add From Camera</string>
+    <string name="a_picture_paints_a_thousand_words">A picture paints a thousand words!</string>
+    <string name="profile_picture_verification">Profile Picture Verification</string>
+    <string name="meet">Meet</string>
+    <string name="match">Match</string>
+    <string name="chat">Chat</string>
+    <string name="social">Social</string>
+    <string name="close_warning">Are you sure you want to close Kikii?</string>
+    <string name="no_internet_connection_please_check_your_internet_connection">No Internet Connection!!!\nPlease Check your internet connection</string>
+    <string name="server_error">Server is not responding!!! \n Sorry for inconvenience</string>
+
+    <string name="privacy_policy">Welcome to KiKii! We are located at Dummy Adress. this Privacy Policy to describe to you our practices regarding the Personal Information (as defined below) that we collect from users of our website, located at www.weareher.com (the “Website”) and through the use of our mobile application (the “Mobile App”), the Website and Mobile App together are collectively referred to as the “Services.” This Privacy Policy applies to your use of the Services but does not apply to any website, offering, product or service of any third party company, even if such third party website links to our Services. We do not control any such third party websites, offerings, products or services so please always review those applicable privacy policies before deciding to provide any information. If you do not consent to any of the terms included in this Privacy Policy, please do not use, or if you are already using, immediately discontinue your use of the Services.
+
+Website and Mobile App. As a part of the Services, you may access and login into the Mobile App. The Mobile App allows you to connect with other members of the LGBTQ community, as further described herein. The Website provides users with the chance to learn more about HER, its products and services, purchase gear and clothing, and the ability to post their thoughts and comments to the Website. Through the Website, users may view the various products and services offered by HER, learn more about the Mobile App and post comments and thoughts on the Website blog.
+
+How Services Work. Our Services allow you to connect and communicate with other members of the LGBTQ community for dating, fun, friendships and more!
+
+So we are clear about the terminology we are using, when we use the phrase “Personal Information” in this Privacy Policy, we mean information that allows someone to identify or contact you, including, for example, your name, address, telephone number, e-mail address, as well as any other non-public information about you that is associated with or linked to any of the foregoing information. When we use the phrase “Anonymous Information” in this Privacy Policy, we mean information that is not associated with or linked to your Personal Information. Anonymous Information does not enable identification of or contact with individual persons.
+
+Children. Our Services are not directed to children and no one under the age of 18 is eligible to use our Services. Protecting the privacy of children is very important to us. We do not collect or maintain Personal Information from people we actually know are under 18 years of age, and no part of our Services is designed to attract people under 18 years of age. If we later learn that a user is under 18 years of age, we will take steps to remove that user’s Personal Information from our databases and to prevent the user from utilizing the Services.
+
+California Privacy Rights. Subject to certain limits under California Civil Code § 1798.83, California residents may request certain information regarding our disclosure of information to third parties or their direct marketing purposes. To make such a request, please contact us as specified below in this Privacy Policy.
+
+A Note to Users Outside of the United States. HER is based in the U.S. If you are a non U.S. user of the Services, by visiting the Website and/or using the Mobile App, you acknowledge and agree that your Personal Information may be processed for the purposes identified in the Privacy Policy. In addition, your Personal Information may be processed in the country in which it was collected and in other countries, including the United States, where laws regarding processing of Personal Information may be less stringent than and less protective of Personal Information than the laws in your country. By providing your information and agreeing to the terms of this Privacy Policy, you consent to such transfer.</string>
+    <string name="snackbar_check_internet">Please check your internet connection!</string>
+    <string name="snackbar_internet_available">Internet Connected</string>
+    <string name="et_error">field required!</string>
+
+    <!--<string-array name="list_of_feet">
+        <item>4'</item>
+        <item>5'</item>
+        <item>6'</item>
+        <item>7'</item>
+        <item>8'</item>
+    </string-array>
+    <string-array name="list_of_inches">
+        <item>0''</item>
+        <item>1''</item>
+        <item>2''</item>
+        <item>3''</item>
+        <item>4''</item>
+        <item>5''</item>
+        <item>6''</item>
+        <item>7''</item>
+        <item>8''</item>
+        <item>9''</item>
+        <item>10''</item>
+        <item>11''</item>
+    </string-array>-->
+
+    <string name="facebook_app_id">3133369890124151</string>
+    <string name="fb_login_protocol_scheme">fb3133369890124151</string>
+    <string name="your_likes">Your Likes</string>
+    <string name="upgrade_to_see_who_liked_you">Upgrade to see who liked you</string>
+    <string name="_6">+6</string>
+    <string name="_0_likes">0 Likes</string>
+    <string name="todo">TODO</string>
+    <string name="your_matches">Your Matches</string>
+    <string name="you_have_24_hours_to_start_conversations_with_a_match_or_it_is_removed">You have 24 hours to start conversations with a match or it is removed.</string>
+    <string name="no_match_found">No Match Found!</string>
+    <string name="Images">Images</string>
+    <string name="video">Videos</string>
+
+    <string name="insta_link">https://www.instagram.com/</string>
+    <string name="fb_link">https://www.facebook.com/</string>
+
+
+    <string name="tiktok_link">https://www.tiktok.com/</string>
+    <string name="kikii_info">Kikii is the popular app for meeting new people. Think of us for most dependable wingmate wherever you go, we will be there. If you want to meet new people, expand your social network and meet locals, you are at the right place.\n\nKikii is easy and fun use the Swipe Right feature to like someone, use the Swipe Left feature to pass. If someone likes you back, its a match. 2 people will only match when there is a mutual interest.\n\nWelcome to kikii the largest community of singles in the world. Do not be shy, come on over.</string>
+
+    <string name="sponsor_text"><![CDATA[<b>This is a Sponsored Content. Want your business ad to be displayed too?<font color=#0000FF> Click here</font></b>]]></string>
+
+</resources>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jobesk.kikiiapp.Activities.MatchActivity"
+    android:background="@drawable/bg_match">
+
+    <LinearLayout
+        android:id="@+id/ll_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="It's your"
+            android:fontFamily="@font/lato_regular"
+            android:textSize="31sp"
+            android:textColor="@color/black">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Match"
+            android:fontFamily="@font/lato_bold"
+            android:textSize="49sp"
+            android:textColor="@color/colorPrimaryDark">
+        </TextView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_match"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_text"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerInParent="true">
+        <LinearLayout
+            android:id="@+id/ll_user1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <com.joooonho.SelectableRoundedImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/img_match_1"
+                    android:layout_width="160dp"
+                    android:layout_height="170dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_place_holder_image"
+                    app:sriv_left_bottom_corner_radius="50dp"
+                    app:sriv_left_top_corner_radius="10dp"
+                    app:sriv_right_bottom_corner_radius="10dp"
+                    app:sriv_right_top_corner_radius="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="left"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_user2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/ll_user1"
+            android:weightSum="2">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="invisible">
+
+            </Button>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="right"
+                android:orientation="vertical">
+                <com.joooonho.SelectableRoundedImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/img_match_2"
+                    android:layout_width="160dp"
+                    android:layout_height="170dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_place_holder_image"
+                    app:sriv_left_bottom_corner_radius="50dp"
+                    app:sriv_left_top_corner_radius="10dp"
+                    app:sriv_right_bottom_corner_radius="10dp"
+                    app:sriv_right_top_corner_radius="10dp"
+                    android:layout_gravity="left"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_match_love"
+            android:layout_centerInParent="true">
+
+        </ImageView>
+    </RelativeLayout>
+    <Button
+        android:id="@+id/btn_start_chatting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_back_red"
+        android:fontFamily="@font/lato_bold"
+        android:text="Start Chatting"
+        android:textAllCaps="false"
+        android:layout_below="@+id/rl_match"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true">
+    </Button>
+</RelativeLayout>

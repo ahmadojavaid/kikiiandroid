@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/audience"
+    android:background="@color/white"
+    android:clickable="true"
+    android:orientation="vertical"
+    tools:context="com.jobesk.kikiiapp.Activities.SplashActivity">
+
+    <include
+        layout="@layout/app_header"/>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/audience"
+        android:background="@color/white"
+        android:clickable="true"
+        tools:context="com.jobesk.kikiiapp.Activities.SplashActivity">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_my_friends"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:itemCount="10"
+                tools:listitem="@layout/item_friends"></androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/tv_no"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="No Friends!"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

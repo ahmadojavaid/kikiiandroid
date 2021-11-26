@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_voice_chat_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/ic_upper_curve"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/userImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_place_holder_image"
+            app:layout_constraintBottom_toTopOf="@+id/userName_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/userName_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="UserName"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/timer_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <Chronometer
+            android:id="@+id/chronometer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toTopOf="@+id/timer_tv"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/timer_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="00:00"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_circles_group"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/ic_call_curve"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/decline_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:onClick="onEncCallClicked"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_endcall"
+            app:layout_constraintBottom_toTopOf="@+id/decline_tv"
+            app:layout_constraintEnd_toEndOf="@+id/decline_tv"
+            app:layout_constraintStart_toStartOf="@+id/decline_tv" />
+
+        <TextView
+            android:id="@+id/decline_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginBottom="20dp"
+            android:text="Decline"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/imageAttend"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_call_accept"
+            app:layout_constraintBottom_toTopOf="@+id/accept_tv"
+            app:layout_constraintEnd_toEndOf="@+id/accept_tv"
+            app:layout_constraintStart_toStartOf="@+id/accept_tv" />
+
+        <TextView
+            android:id="@+id/accept_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="20dp"
+            android:text="Accept"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageCancellCall"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:onClick="onEncCallClicked"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_endcall"
+            app:layout_constraintBottom_toTopOf="@+id/cancel_tv"
+            app:layout_constraintEnd_toStartOf="@+id/imageAttend"
+            app:layout_constraintStart_toEndOf="@+id/decline_img" />
+
+        <TextView
+            android:id="@+id/cancel_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Cancel"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageCancellCall"
+            app:layout_constraintStart_toStartOf="@+id/imageCancellCall" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:onClick="onLocalAudioMuteClicked"
+        android:scaleType="centerInside"
+        android:src="@drawable/btn_mute"
+        android:visibility="gone"
+        tools:layout_editor_absoluteX="114dp"
+        tools:layout_editor_absoluteY="458dp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:onClick="onSwitchSpeakerphoneClicked"
+        android:scaleType="centerInside"
+        android:src="@drawable/btn_speaker"
+        android:visibility="gone"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="458dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

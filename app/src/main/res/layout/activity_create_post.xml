@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    tools:context="com.jobesk.kikiiapp.Activities.CreatePostActivity">
+
+    <RelativeLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context="com.jobesk.kikiiapp.Activities.CreatePostActivity">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/app_header" />
+
+        <RelativeLayout
+            android:id="@+id/rl_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="20dp"
+            android:gravity="left">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_user"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_user_dummy" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/img_user"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toLeftOf="@+id/tv_time_ago"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Gernald"
+                    android:textColor="@color/black"
+                    android:textSize="18sp">
+
+                </TextView>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/et_body"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/rl_user"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/border_four_corner_round_red"
+            android:fontFamily="@font/lato_italic"
+            android:gravity="left|top"
+            android:hint="What's going on? Share...."
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/light_grey" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/et_body"
+            android:layout_marginTop="20dp"
+            android:alpha="0.3"
+            android:background="@color/light_grey" />
+
+        <LinearLayout
+            android:id="@+id/ll_bottom_options"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/view1"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toLeftOf="@+id/img_select_image"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_media"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="3"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_post_image_media" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_select_image"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/view1"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_fancy_camera" />
+    </RelativeLayout>
+</ScrollView>
